@@ -2,7 +2,7 @@
 
 **A complete step-by-step guide to finding and permanently patching the health subtraction in Chocolate Doom using Cheat Engine + x64dbg.**
 
-![Architecture diagram](diagramar.gif)
+![Architecture diagram](diagramar.png)
 
 ---
 
