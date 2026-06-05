@@ -2,6 +2,8 @@
 
 **A complete step-by-step guide to finding and permanently patching the health subtraction in Chocolate Doom using Cheat Engine + x64dbg.**
 
+![Architecture diagram](diagramar.gif)
+
 ---
 
 ## 📋 Table of Contents
@@ -42,7 +44,7 @@ This guide demonstrates how to:
 2. Download Freedoom and copy `freedoom1.wad` + `freedoom2.wad` into the Chocolate Doom folder.
 3. Launch the game and verify health displays correctly.
 
-![Setup Screenshot](attachments/setup-complete.png)
+![Setup Screenshot](setup-complete.png)
 
 ---
 
@@ -53,20 +55,20 @@ This guide demonstrates how to:
 - Set value to your current health (e.g., `100`).
 - **First Scan** → Exact Value → 4 Bytes.
 
-![First Scan](attachments/first-scan-100.png)
+![First Scan](first-scan-100.png)
 
 ### Damage & Next Scans
 - Take damage → Note new health (e.g., `73`).
 - **Next Scan** with updated value.
 - Repeat until 4-5 addresses remain.
 
-![Health Scan Progress](attachments/scan-success.png)
+![Health Scan Progress](scan-success.png)
 
 ### Add to Address List & Test
 - Select addresses → Right-click → **Add selected addresses**.
 - Change value to `100` to test.
 
-![Health Modified](attachments/health-100-success.png)
+![Health Modified](health-100-success.png)
 
 ---
 
@@ -76,7 +78,7 @@ This guide demonstrates how to:
 2. Take damage again.
 3. Identify the `sub` instruction (e.g., `sub [r11+2C], r10d`).
 
-![Write Access Found](attachments/find-writes.png)
+![Write Access Found](find-writes.png)
 
 ---
 
@@ -86,15 +88,15 @@ This guide demonstrates how to:
 - Run x64dbg as Administrator.
 - Attach to `chocolate-doom.exe`.
 
-![Attach x64dbg](attachments/attach-to-gdb.png)
+![Attach x64dbg](attach-to-gdb.png)
 
 ### Locate & NOP the Instruction
 - Go to the address from Cheat Engine.
 - Replace `sub` with `nop` (90 in hex).
 - Multiple NOPs may be needed.
 
-![Assembly Patch](attachments/address-located.png)
-![NOPs Applied](attachments/filled-with-nop.png)
+![Assembly Patch](address-located.png)
+![NOPs Applied](filled-with-nop.png)
 
 ### Save Patched Executable
 - Modify binary → Save as new EXE.
@@ -106,8 +108,29 @@ This guide demonstrates how to:
 - Launch patched executable.
 - Health should no longer decrease when taking damage.
 
-![Infinite Health](attachments/health-not-reducing.png)
+![Infinite Health](health-not-reducing.png)
 
 ---
 
-## Files Structure
+
+---
+
+## ⚠️ Legal & Ethical Notice
+
+- This is for **educational purposes** only.
+- Use only on single-player/offline games you own.
+- Respect game developers' work.
+
+---
+
+## Contributing
+
+Pull requests welcome! Add more patches (ammo, armor, etc.).
+
+---
+
+**Made with ❤️ for the Doom community**
+
+*Last updated: June 2026*
+
+
