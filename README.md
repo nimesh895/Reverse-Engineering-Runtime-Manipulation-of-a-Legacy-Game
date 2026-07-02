@@ -44,7 +44,7 @@ This guide demonstrates how to:
 2. Download Freedoom and copy `freedoom1.wad` + `freedoom2.wad` into the Chocolate Doom folder.
 3. Launch the game and verify health displays correctly.
 
-![Setup Screenshot](setup-complete.png)
+![Setup Screenshot](downloadingchocalatedoomstep1.png)
 
 ---
 
