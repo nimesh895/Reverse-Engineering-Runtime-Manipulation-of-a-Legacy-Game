@@ -22,7 +22,7 @@
 ## Overview
 
 This guide demonstrates how to:
-1. Use **Cheat Engine** to locate the health value and the code that subtracts damage.
+1. Use  **Cheat Engine** to locate the health value and the code that subtracts damage.
 2. Use **x64dbg** to patch the `sub` instruction to `nop` (no operation) for infinite health.
 
 **Game**: Chocolate Doom 3.1.1 running [Freedoom]([https://freedoom.github.io/](https://www.chocolate-doom.org/wiki/index.php/Chocolate_Doom) (free Doom IWAD replacement).
